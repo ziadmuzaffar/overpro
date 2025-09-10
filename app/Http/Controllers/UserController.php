@@ -25,7 +25,6 @@ class UserController extends Controller
     {
         $data = $request->all();
         if (!$request->password) unset($data['password']);
-        return $data;
         $user->update($data);
         return back();
     }
